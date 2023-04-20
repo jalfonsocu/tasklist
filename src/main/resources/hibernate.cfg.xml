@@ -1,0 +1,24 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- Set URL -->
+        <property name = "hibernate.connection.url">jdbc:hsqldb:file:db/taskdb</property>
+        <!-- Set User Name -->
+        <property name = "hibernate.connection.username">SA</property>
+        <!-- Set Password -->
+        <property name = "hibernate.connection.password">SA</property>
+        <!-- Set Driver Name -->
+        <property name = "hibernate.connection.driver_class">org.hsqldb.jdbc.JDBCDriver</property>
+        <property name = "hibernate.show_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- mappings for annotated classes -->
+        <mapping class="com.model.Task"/>
+
+
+    </session-factory>
+</hibernate-configuration>
